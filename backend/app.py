@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import jsonify
 from flask import request
+from utils.monte_carlo import approximation_of_the_PI
 
 app = Flask(__name__)
 
@@ -10,13 +11,12 @@ def test():
     return jsonify(result='Hello')
 
 
-@app.route('/test', methods=['POST'])
+@app.route('/monte_carlo', methods=['GET'])
 def test_post():
-    request_data = request.get_json()
-    city = request.args.get('city')
+    runs = request.args.get('runs')
+    result = approximation_of_the_PI(int(runs))
 
-    # return request_data
-    return jsonify(city=city)
+    return jsonify(result)
 
 
 app.run()
