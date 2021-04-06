@@ -7,3 +7,7 @@ GET http://localhost:5000/monte_carlo?runs=100000
 ###
 
 GET http://localhost:5000/monte_carlo?runs=100
+
+###
+
+GET http://localhost:5000/monte_carlo/approximation_of_the_figure_field?runs=100000
