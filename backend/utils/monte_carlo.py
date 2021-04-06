@@ -7,6 +7,7 @@ def approximation_of_the_PI(runs):
 
     times = 10
     pi = 0
+    lim = pow(0.5, 2)
     for i in range(0, times):
         in_circle = 0
 
@@ -14,7 +15,8 @@ def approximation_of_the_PI(runs):
             xs = np.random.uniform(-0.5, 0.5, 1)[0]
             ys = np.random.uniform(-0.5, 0.5, 1)[0]
             f = pow(xs, 2) + pow(ys, 2)
-            in_circle += 1 if f <= pow(0.5, 2) else 0
+            if f <= lim:
+                in_circle += 1
 
         pi += (in_circle/runs)*4
 
