@@ -2,11 +2,11 @@ GET http://localhost:5000/test
 
 ###
 
-GET http://localhost:5000/monte_carlo?runs=100000
+GET http://localhost:5000/monte_carlo/approximation_of_the_PI?runs=100000
 
 ###
 
-GET http://localhost:5000/monte_carlo?runs=100
+GET http://localhost:5000/monte_carlo/approximation_of_the_PI?runs=100
 
 ###
 

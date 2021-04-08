@@ -24,12 +24,11 @@ def approximation_of_the_PI(runs):
 
     return pi/times
 
-# TODO RESTRUCTURE | ADD entrance list sort
-
-
 def approximation_of_the_figure_field_created_by_chart(coordinates_of_points, runs):
     if(runs > 1_000_000):
         return 0
+
+    sorted(coordinates_of_points, key=lambda l: l[0], reverse=False)
 
     ab = list()
     max_x = 0
