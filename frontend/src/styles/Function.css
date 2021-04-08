@@ -1,0 +1,70 @@
+/* Highest container */
+.Function-parameters-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+/* Points and input field to add new points */
+.Function-parameter-field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+.Function-input-container{
+    display:flex;
+
+}
+.Function-input-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Function-parameter-name{
+    text-align: left;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+.Function-text-input{
+    display: flex;
+    text-align: center;
+    width: 40%;
+    padding: 5px;
+    border-radius: 0px;
+    font-size: 28px;
+    background-color: #FFF8F0;
+    color: transparent;
+    text-shadow: 0 0 0 #282C34;
+    box-shadow: 0px -1px 1px 2px rgba(0,0,0,0.6);
+    border-radius: 7px;
+}
+
+.Function-text-input:focus{
+    box-shadow: 0px -1px 4px 4px rgba(0,0,0,0.6);
+    background-color: #f0f1f4;
+}
+
+.Add-button{
+    display: flex;
+    min-width: 50%;
+    margin-top: 20px;
+    font-size: 28px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #003300;
+    color: #FFF8F0;
+    outline: none;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  .Add-button:hover{
+    cursor: pointer;
+    background-color: #001a00;
+  }

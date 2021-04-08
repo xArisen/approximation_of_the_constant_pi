@@ -18,7 +18,7 @@ const ParametersCard = (props) => {
       let errorValues = [];
         for(var it = minSamples; it<=maxSamples; it+=difference)
         {
-          await axios.get(`http://localhost:5000/monte_carlo?runs=${it}`)
+          await axios.get(`http://localhost:5000/monte_carlo/approximation_of_the_PI?runs=${it}`)
           .then((res)=>{
             errorValues.push(calculateError(res.data));
             console.log(res.data);
@@ -52,8 +52,8 @@ const ParametersCard = (props) => {
               <h3 className="Parameter-name">Odstęp między próbkami</h3>
               <input className="Text-input"  placeholder={difference} onChange={e=>setDifference(parseInt(e.target.value))}/>
             </div>
-          <button className="Button" onClick={submitParameters}> SYMULUJ </button>
           </div>
+          <button className="Button" onClick={submitParameters}> SYMULUJ </button>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React,{ useState, useEffect } from 'react';
-import {Bar} from 'react-chartjs-2';
+import { Bar, Line } from 'react-chartjs-2';
 
 import '../styles/Chart.css';
 
@@ -9,19 +9,20 @@ const Chart = (props) => {
 
     useEffect(()=>{
         chart(props);
-    },[])
+    },[props.data])
     
     const chart = (props) =>{
         setChartData({
             labels:props.data.samples,
             datasets:[{
-                label:'Błąd bezwzględny oszacowania',
+                label:props.type==='Bar'?'Błąd bezwzględny oszacowania':'f(x)',
                 data:props.data.values,
                 backgroundColor:'#282C34',
                 borderColor:'#282C34',
                 borderWidth:5,
                 barPercentage:1.0,
                 categoryPercentage:1.0,
+                tension:0
             }],
         })
 
@@ -45,7 +46,7 @@ const Chart = (props) => {
      
     return(
         <>
-        <Bar data={chartData} options={options} redraw/>
+        {props.type==='Bar'?<Bar data={chartData} options={options} redraw/>:<Line data={chartData} options={options} redraw/>}
         </>
     )
 }
