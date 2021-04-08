@@ -23,17 +23,12 @@ def calculate1():
     return jsonify(result)
 
 
-# Delete after dev
-exapleJson = '{ "points_coordinates": [ [0, 0], [2, 2],  [6, 1], [8, 0] ] }'
-
-# TODO change for external API
-
-
 @app.route('/monte_carlo/approximation_of_the_figure_field', methods=['GET'])
 def calculate2():
     runs = request.args.get('runs')
+    points_coordinates = request.args.get('points_coordinates')
     result = approximation_of_the_figure_field_created_by_chart(
-        json.loads(exapleJson)['points_coordinates'], int(runs))
+        json.loads(points_coordinates)['points_coordinates'], int(runs))
 
     return jsonify(result)
 

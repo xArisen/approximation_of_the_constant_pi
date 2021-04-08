@@ -24,7 +24,7 @@ def approximation_of_the_PI(runs):
 
     return pi/times
 
-# TODO RESTRUCTURE
+# TODO RESTRUCTURE | ADD entrance list sort
 
 
 def approximation_of_the_figure_field_created_by_chart(coordinates_of_points, runs):
